@@ -1,0 +1,74 @@
+/* root -> coin-app -> coin-search , multiple 'coin-container' for all the coins
+coin-container -> coin-row -> {{ coin -> img , h1 , p } ,
+{ coin-data -> coin-price, coin-value, coin-percent, coin-market-cap} } */
+
+
+.coin-container{
+    display : flex ; 
+    justify-content :center ;
+}
+
+.coin-row{
+    display : flex ; 
+    flex-direction: row;
+    align-items: center;
+    /* justify-items : start ; */
+    height : 80px ; 
+    border-bottom : 1px solid red;
+    width : 900px ; 
+
+}
+.coin{
+    display:flex ; 
+    align-items : center ; 
+    padding-right : 24px ; 
+    min-width : 300px ; 
+}
+.coin h1{
+    font-size : 16px ;
+    width : 150px ; 
+    padding-left: 13px;
+}
+/* either put img in a div or access it's css seperately  */
+/* this is the mst intersting part of the whole mess  */
+.coin img{
+    height : 30px ; 
+    width : 30px ; 
+    margin-right : 10px ;
+    transition : all ease-in-out; 
+
+}
+.coin img:hover{
+    transform : scale(2);
+}
+.coin-symbol{
+    text-transform: uppercase;
+}
+.coin-data{
+    display : flex ; 
+    justify-content: space-between ;
+    text-align : center ; 
+    width : 100% ; 
+}
+.coin-price{
+    width : 110px;
+}
+.coin-value{
+    width : 150px ; 
+}
+
+.coin-marketcap{
+    
+    width : 220px ;
+}
+.coin-percent{
+    width : 120px;  
+}
+
+/* already set by inline css only  */
+.red{
+    color : red
+ }
+ .green{
+    color : green ; 
+ }
